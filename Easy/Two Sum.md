@@ -32,21 +32,21 @@ Only one valid answer exists.
 Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
 
 ```
- List<int> twoSum(List<int> nums, int target) {
-  // Create a map to store the numbers we have seen so far
-  Map<int, int> seenNumbers = {};
+List<int> twoSum(List<int> nums, int target) {
+  // Create a map to store the numbers we have seen so far along with their indices
+  Map<int, int> numberToIndexMap = {};
 
   // Iterate through the list
   for (int i = 0; i < nums.length; i++) {
     int complement = target - nums[i]; // The number we need to find
 
     // Check if the complement exists in the map
-    if (seenNumbers.containsKey(complement)) {
-      return [seenNumbers[complement]!, i]; // Return the indices of the pair
+    if (numberToIndexMap.containsKey(complement)) {
+      return [numberToIndexMap[complement]!, i]; // Return the indices of the pair
     }
 
     // Add the current number and its index to the map
-    seenNumbers[nums[i]] = i;
+    numberToIndexMap[nums[i]] = i;
   }
 
   return []; // If no solution is found (though the problem guarantees a solution)
