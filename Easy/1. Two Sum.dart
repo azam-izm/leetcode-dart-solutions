@@ -1,4 +1,4 @@
-// Given a list of integers and a target value, return the indices of the two numbers whose sum equals the target.
+// Given a list of integers and a target value, return the indices of the two numbers whose sum equals the target. 
 
 void main() {
   // Example input
