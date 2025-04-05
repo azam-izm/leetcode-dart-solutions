@@ -33,7 +33,7 @@ Follow-up: Can you come up with an algorithm that is less than O(n2) time comple
 
 ```
 List<int> twoSum(List<int> nums, int target) {
-  // Create a map to store the numbers along with their indices
+  // Create a map to store the numbers as keys and their indices as values.
   Map<int, int> numberToIndexMap = {};
 
   // Iterate through the list
